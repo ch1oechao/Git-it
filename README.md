@@ -289,7 +289,7 @@ Check Git status
 
 Pull in changes from a remote branch
 
-	$ git oull REMOTENAME REMOTEBRANCH
+	$ git pull REMOTENAME REMOTEBRANCH
 
 See changes to the remote before you pull in
 
