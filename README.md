@@ -270,6 +270,17 @@ Rename a branch you're currently on:
 Verify what branch you're working on
 
 	$ git status
+	
+Delete remote branch
+
+	// see all
+	
+	$ git branch -a	
+	
+	// delete the remote branch
+	$ git branch -r -d origin/branch-name
+	$ git branch origin :branch-name
+	
 
 ####Pull Never Out Of Date
 
