@@ -1,6 +1,6 @@
-###Git it
+### Git it
 
-####Configure Git
+#### Configure Git
 
 when you install the git you could know the gir version
 by this following command:
@@ -17,14 +17,14 @@ Set your email:
 
 	$ git config --global user.email "youremail@example.com"
 
-####Repositories
+#### Repositories
 
 You will tell Git what your project is and Git will start tracking all of the changes to that folder. Files added or subtracted or even a single letter in a single file changed -- all of it's tracked and time stamped by Git.
 That's version control.
 
 Using Terminal to do all of things about Git!
 
-#####Create a Repository
+##### Create a Repository
 
 To make a new folder:
 
@@ -50,7 +50,7 @@ Turn Git on for a folder
 
 	$ git init
 
-#####Create a New File
+##### Create a New File
 
 Now that you've got a repository started, add a file to it.
 
@@ -66,7 +66,7 @@ Finally, commit thoes changes to the repository's history with a short descripti
 
 	$ git commit -m "you commit message"
 
-#####Make More Changes
+##### Make More Changes
 
 Now add another line to README.md and save.
 
@@ -97,19 +97,19 @@ To commit the changes you've added with a short message describing the changes
 	$ git commit -m "your commit message"
 
 
-####Better, together
+#### Better, together
 
 The repository you've created so far i just on your computer, which is handy, but makes it pettry hard to share and work with others on.
 
 So, just create a GitHub account and start a fun trip!
 
-#####Create a GitHub Account
+##### Create a GitHub Account
 
 Add your GitHub username to your configuration:
 
 	$ git config --global user.username YOUNAME
 
-####Remotes
+#### Remotes
 
 When you put something on GitHub, that copy lives on one of GitHub's servers. This makes it a remote repository because it is not on your computer, but on a server, "remote" and somewhere else.
 
@@ -118,11 +118,11 @@ By pushing your local (on your computer) changes to it, you keep it up to date.
 Others can always get the latest from your project by pulling your changes down from the remote (and onto their computer). This is how everyone can work on a project together without needing access to your computer where your local copy is stored.
 
 
-#####Create a Remote Repository
+##### Create a Remote Repository
 
 You want to sync your local version with one stored on GitHub.com called the remote version. So first create an empty remote repository on GitHub.com
 
-#####Readme.md, .gitignores and Licenses
+##### Readme.md, .gitignores and Licenses
 
 There are common files in open source projects.
 
@@ -132,7 +132,7 @@ A ```.gitignore``` is alist of files that Git should not track, for instance, fi
 
 A ```license``` file is the type of license you put on your project.
 
-#####Connect your Local to your Remote
+##### Connect your Local to your Remote
 
 Now you've got an empty repository started on GitHub.com. At the top you'll see 'Quick Setup', make sure the 'HTTP' button is selected and copy the address --- this is the location of your repository on GitHub's servers.
 
@@ -142,7 +142,7 @@ Back in your terminal, and inside of the 'your-folder-name' folder that you init
 
 Your local repository now knows where your remote one named 'origin' lives on GitHub's servers. Think of it as adding a name and address on speed dial --- now when you need to send something there, you can.
 
-#####Push Work to your Remote
+##### Push Work to your Remote
 
 Next you want to push everything you've done locally to GitHub. Ideally you want to stay in sync, meaning your local and remote versions match.
 
@@ -176,9 +176,9 @@ Push changes
 
 	$ git push REMOTENAME BRANCH
 
-####Forks And Clones
+#### Forks And Clones
 
-#####Forks
+##### Forks
 
 Now you've made a project locally and pushed it to GitHub, but that's only half the fun. The other half is working with other people and projects.
 
@@ -186,7 +186,7 @@ When you fork a repository, you've creating a copy of it on your GitHub account.
 
 Once a project is forked, you then clone it from GitHub to your computer to work on locally.
 
-#####Clone Fork Locally
+##### Clone Fork Locally
 
 Now, in terminal, clone the repository onto your computer. It will create a new folder for the repository so no need to create one. But make sure you aren't cloning it inside of another Git repository folder! 
 
@@ -198,7 +198,7 @@ Go into the folder for the fork it created
 
 	$ cd patchwork
 
-#####Connect to the Original Repository
+##### Connect to the Original Repository
 
 But what if the original repository you forked from changes? You'll to be able to pull in those changes too. So let's add another remote connection, this time to the original, URLFROMGITHUB, repository with ites URL, found on the right hand side of the original on GitHub.
 
@@ -207,23 +207,23 @@ You can name this remote connection anything you want, but ofter people use 'ups
 	$ git remote add upstream URLFROMGITHUB
 
 
-####Branches
+#### Branches
 
 Git repositories use branches to isolate work when needed. It's common practice when working on a project or with others on a project to create a branch to keep your changes in until they are ready. This way you can do your work while the main, commonly named 'master', branch stays stable. When your branch is ready, you merge it back into 'master'.
 
-####GitHub Pages
+#### GitHub Pages
 
 GitHub will automatically serve and host static website files in branches named 'gh-pages'. Since the project you forked creates a website, its main branch is 'gh-pages' instead of 'master'. All sites lick this can be found using this pattern for the URL: 
 
 	http://githubusername.github.io/repositoryname
 
-####Create a branch
+#### Create a branch
 
 When you create a branch, Git copies everything from the current branch you're on and places it in the branch you've requested.
 
 Type git status to see what branch you've currently on.
 
-Create a branch and name it 'add -username', where 'username' id your username. 
+Create a branch and name it 'add -username', where 'username' is your username. 
 
 	$ git branch BRANCHNAME
 
@@ -282,13 +282,13 @@ Delete remote branch
 	$ git branch origin :branch-name
 	
 
-####Pull Never Out Of Date
+#### Pull Never Out Of Date
 
-#####Pulling from a Remote
+##### Pulling from a Remote
 
 If you're working on something with someone you need to stay up to date with the latest state. So you'll want to pull in any changes that may have been made.
 
-$ git pull REMOTENAME BRANCHNAME
+    $ git pull REMOTENAME BRANCHNAME
 
 If nothing's changed, it will tell you 'Already up-to-date'. If there are changes, it will merge thoes changes into your local version.
 
@@ -306,12 +306,12 @@ See changes to the remote before you pull in
 
 	$ git fetch --dry-run
 
-####Pull Requests
+#### Pull Requests
 
 When you make changes and impovements to a project you've forked, often you'll want to send thoes changes to the maintainer of the original and requeat that they pull the changes into the original so that everyone can benefit from the updates --- that's a pull request
 
 
-####Merge Locally
+#### Merge Locally
 
 Your pull request has benn merged! Now, since you know that you definitely want those updates in your forked version, and your branch is in good working order, merge it into the main branch on your forked repository, in this case, 'gh-pages'.
 
@@ -331,7 +331,7 @@ You can also delete the branch form your fork on GitHub:
 
 	$ git push REMOTENAME --delete BRANCHNAME
 
-####Pull from Upstream
+#### Pull from Upstream
 
 And last but not least, if you pull in updates from the original, you'll be up to date and have a version too.
 
